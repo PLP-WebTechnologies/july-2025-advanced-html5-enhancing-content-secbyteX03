@@ -160,6 +160,214 @@
           </figure>
         </div>
       </section>
+
+      <!-- The form -->
+      <section aria-labelledby="form-heading">
+        <h2 id="form-heading">Registration Form</h2>
+
+        <form action="#" method="post" novalidate>
+          <!-- Personal details -->
+          <fieldset>
+            <legend>Personal Details</legend>
+
+            <p>
+              <label for="regid">Registration ID</label><br />
+              <input
+                id="regid"
+                name="regid"
+                type="text"
+                value="REG-2025-001"
+                readonly
+                aria-readonly="true"
+              />
+              <small>System-assigned (readonly)</small>
+            </p>
+
+            <p>
+              <label for="fullname"
+                >Full name <span aria-hidden="true">*</span></label
+              ><br />
+              <input
+                id="fullname"
+                name="fullname"
+                type="text"
+                placeholder="e.g. Jane Doe"
+                required
+                autocomplete="name"
+                minlength="3"
+              />
+            </p>
+
+            <p>
+              <label for="email"
+                >Email address <span aria-hidden="true">*</span></label
+              ><br />
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="name@example.com"
+                required
+                autocomplete="email"
+              />
+              <small id="emailHelp">We'll use this to send confirmation.</small>
+            </p>
+
+            <p>
+              <label for="phone"
+                >Phone number <span aria-hidden="true">*</span></label
+              ><br />
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="e.g. 0712345678"
+                required
+                pattern="[0-9]{7,15}"
+                inputmode="tel"
+                autocomplete="tel"
+              />
+              <small>Digits only, 7–15 characters.</small>
+            </p>
+
+            <p>
+              <label for="dob"
+                >Date of birth <span aria-hidden="true">*</span></label
+              ><br />
+              <input id="dob" name="dob" type="date" required />
+            </p>
+          </fieldset>
+
+          <!-- Account details -->
+          <fieldset>
+            <legend>Account</legend>
+
+            <p>
+              <label for="username"
+                >Username <span aria-hidden="true">*</span></label
+              ><br />
+              <input
+                id="username"
+                name="username"
+                type="text"
+                placeholder="choose a username"
+                required
+                minlength="3"
+                autocomplete="username"
+              />
+            </p>
+
+            <p>
+              <label for="password"
+                >Password <span aria-hidden="true">*</span></label
+              ><br />
+              <input
+                id="password"
+                name="password"
+                type="password"
+                placeholder="At least 8 characters"
+                required
+                minlength="8"
+                autocomplete="new-password"
+              />
+              <small>Password must be at least 8 characters.</small>
+            </p>
+          </fieldset>
+
+          <!-- Preferences and validations -->
+          <fieldset>
+            <legend>Preferences & Confirmation</legend>
+
+            <p>
+              <label for="age">Age <span aria-hidden="true">*</span></label
+              ><br />
+              <input
+                id="age"
+                name="age"
+                type="number"
+                min="13"
+                max="120"
+                required
+                placeholder="Your age"
+              />
+              <small>Minimum age is 13.</small>
+            </p>
+
+            <p>
+              <label for="website">Personal website (optional)</label><br />
+              <input
+                id="website"
+                name="website"
+                type="url"
+                placeholder="https://example.com"
+                autocomplete="url"
+              />
+            </p>
+
+            <p>
+              <label for="interest"
+                >Course of interest <span aria-hidden="true">*</span></label
+              ><br />
+              <select id="interest" name="interest" required>
+                <option value="">-- Select an option --</option>
+                <option value="html">HTML5 Essentials</option>
+                <option value="forms">Forms & Accessibility</option>
+                <option value="media">Media & Semantic Content</option>
+              </select>
+            </p>
+
+            <p>Gender:</p>
+            <p>
+              <input
+                type="radio"
+                id="gender-f"
+                name="gender"
+                value="female"
+                required
+              />
+              <label for="gender-f">Female</label>
+              <input type="radio" id="gender-m" name="gender" value="male" />
+              <label for="gender-m">Male</label>
+              <input type="radio" id="gender-o" name="gender" value="other" />
+              <label for="gender-o">Other</label>
+            </p>
+
+            <p>
+              <label for="profile">Profile picture (optional)</label><br />
+              <input id="profile" name="profile" type="file" accept="image/*" />
+              <small>Accepted formats: image files</small>
+            </p>
+
+            <p>
+              <label for="notes">Notes (optional)</label><br />
+              <textarea
+                id="notes"
+                name="notes"
+                rows="4"
+                maxlength="500"
+                placeholder="Any accessibility needs or notes..."
+              ></textarea>
+            </p>
+
+            <p>
+              <input id="subscribe" name="subscribe" type="checkbox" />
+              <label for="subscribe">Subscribe to updates</label>
+            </p>
+
+            <p>
+              <input id="agree" name="agree" type="checkbox" required />
+              <label for="agree"
+                >I agree to the terms and conditions
+                <span aria-hidden="true">*</span></label
+              >
+            </p>
+          </fieldset>
+
+          <p>
+            <button type="submit">Submit registration</button>
+          </p>
+        </form>
+      </section>
     </main>
     <footer>
       <p>
